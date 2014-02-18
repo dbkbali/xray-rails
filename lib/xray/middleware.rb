@@ -51,7 +51,7 @@ module Xray
     private
 
     def xray_bar
-      ActionController::Base.new.render_to_string(:partial => '/xray_bar').html_safe
+      ActionController::Base.new.render_to_body(:partial => '/xray_bar').to_s.html_safe
     end
 
     # Appends the given `script_name` after the `after_script_name`.
